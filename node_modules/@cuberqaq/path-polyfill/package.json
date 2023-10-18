@@ -1,0 +1,23 @@
+{
+  "name": "@cuberqaq/path-polyfill",
+  "version": "1.0.0",
+  "description": "Polyfill of node:path for ZeppOS and browser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CuberQAQ/zepp-path-polyfill.git"
+  },
+  "keywords": [
+    "zeppos",
+    "zepp"
+  ],
+  "author": "CuberQAQ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CuberQAQ/zepp-path-polyfill/issues"
+  },
+  "homepage": "https://github.com/CuberQAQ/zepp-path-polyfill#readme"
+}
