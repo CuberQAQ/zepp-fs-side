@@ -21,7 +21,7 @@ Then you can use the methods in the same way you do with @zos/fs module. API Doc
 For example:
 
 ```js
-import fs from ".";
+import fs from "@cuberqaq/fs-side";
 fs.writeFileSync({
   path: "test.txt",
   data: "hello world!",
