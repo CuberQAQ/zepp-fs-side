@@ -1,3 +1,10 @@
+/**
+ * Open Source Module @cuberqaq/fs-side
+ * @description Simple Lib for ZeppOS 1.0/2.0/2.1 app-side to build a vitual file system.
+ * @author CuberQAQ <a224503353@163.com>
+ * @license Apache-2.0
+ * Repo: https://github.com/CuberQAQ/zepp-fs-side
+ */
 import * as path from "@cuberqaq/path-polyfill";
 // Operation Flags
 export const O_RDONLY = 0x01;
@@ -430,12 +437,13 @@ export function readSync(option) {
       return;
   }
   let handle_info = _parseFileHandle(option.fd);
-  DEBUG && console.warn(
-    "handle_info",
-    handle_info,
-    "buf length",
-    option.buffer?.byteLength
-  );
+  DEBUG &&
+    console.warn(
+      "handle_info",
+      handle_info,
+      "buf length",
+      option.buffer?.byteLength
+    );
   if (typeof handle_info === "undefined") return;
   let res = _readFile(handle_info.fileObj, option.buffer, {
     ...option.options,
