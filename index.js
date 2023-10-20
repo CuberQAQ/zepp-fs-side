@@ -340,8 +340,8 @@ export function openSync(option) {
     typeof option.path !== "string"
   )
     throw new Error("[CBFS] Arg Type Error");
-  if (typeof option.flag !== "number") throw new Error("[CBFS] Arg Type Error");
   if (typeof option.flag === "undefined") option.flag = O_RDONLY;
+  if (typeof option.flag !== "number") throw new Error("[CBFS] Arg Type Error");
   if (!_checkIfInited()) _initFileSystem();
   let handle = _getNewFileHandle(path.join("/data", option.path), option.flag);
   if (typeof handle === "undefined") throw new Error("[CBFS] Operation Error");
