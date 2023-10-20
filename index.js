@@ -233,7 +233,7 @@ export function _moveFile(oldPathLike, newPathLike) {
 export function _readFile(
   fileObj,
   buf,
-  { offset = 0, length = Number.MAX_SAFE_INTEGER, position = 0 }
+  { offset = 0, length = Number.MAX_SAFE_INTEGER, position = 0 } = {}
 ) {
   if (
     typeof fileObj === "undefined" ||
@@ -241,6 +241,7 @@ export function _readFile(
     typeof fileObj.size !== "number"
   )
     return;
+  if(typeof buf === 'undefined') buf = new ArrayBuffer(fileObj.size)
   if (!(buf instanceof ArrayBuffer)) return;
   let raw_str = _getItem(_getKey("block", fileObj.block));
   DEBUG && console.warn("raw_str", raw_str);
