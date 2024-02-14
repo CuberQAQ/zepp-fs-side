@@ -90,7 +90,7 @@ export function _resetFileSystem() {
       _free(fileObj.block);
       ++deletedFileCount;
     }
-    // Enquene Children Dirs
+    // Enqueue Children Dirs
     for (let childDirname of dirObj.dirs) {
       let childDirObj = _getDirObj(childDirname);
       if (typeof childDirObj !== "undefined") quene.push(childDirObj);
